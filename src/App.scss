@@ -1,0 +1,105 @@
+body {
+  margin: 0; 
+}
+
+.App {
+  padding: 0 1rem;
+
+  @media (min-width: 960px) {
+    padding: 0 2rem;
+  }
+
+  header {
+    padding: 2rem 0;
+    min-height: 20vh;
+    background: {
+      image: url('https://gina-leee-portfolio.s3.us-east-2.amazonaws.com/stock-images/shoes-background.jpg');
+      position: center;
+      size:  cover;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0; 
+      font-family: fantasy;
+      font-weight: 900;
+    }
+
+    @media (min-width: 960px) {
+      min-height: 30vh;
+
+      h1 {
+        font-size: 3.5rem;
+      }
+    }
+  }
+
+  main {
+    .products-list {
+      display: grid;
+      grid-gap: 1.5rem;
+    }
+
+    .product {
+      border: 1px solid black;
+
+      img {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .content {
+        padding: 1.875rem 1.25rem;
+      }
+
+      h2, p { margin: 0; }
+
+      h2 {
+        margin-bottom: 10px; 
+        font-size:  2rem;
+        color: rgb(0, 54, 112);
+        font-weight: normal;
+      }
+
+      p {
+        margin-bottom: 20px;
+        font-size: 22px;
+        font-family: monospace;
+        color: #2f2f2f;
+      }
+
+      button {
+        font-size: 1.25rem;
+        background-color: black;
+        color: white;
+        border: none;
+        width: 100%;
+        padding: 19px;
+        font-family: sans-serif;
+        font-weight: bold;
+        letter-spacing: 2px;
+        cursor: pointer;
+      }
+    }
+
+    @media (min-width: 960px) {
+      .products-list {
+        grid-template-columns: repeat(3, 1fr); 
+      }
+
+      .product {
+        .content {
+          padding: 2.5rem 2.1875rem;
+        }
+
+        p {
+          font-size: 1.875rem;
+        }
+
+        button {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
